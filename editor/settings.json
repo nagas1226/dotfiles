@@ -1,0 +1,28 @@
+{
+  // vim
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.tabSize": 4
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  }
+}
