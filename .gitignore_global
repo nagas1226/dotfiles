@@ -1,0 +1,13 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# python
+__pycache__/
+
+# dotenv environment variable files
+.env
+
+# claude configs
+.claude/

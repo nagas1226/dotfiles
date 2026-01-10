@@ -1,0 +1,41 @@
+git:
+  autocommit: false
+  pagers:
+    - colorArg: always
+      pager: delta --paging=never --true-color=auto --dark --side-by-side --line-numbers --syntax-theme=Dracula --width=variable --navigate
+      #useConfig: true
+#
+gui:
+  # DRACULA
+  theme:
+    activeBorderColor:
+      - "#FF79C6"
+      - bold
+    inactiveBorderColor:
+      - "#BD93F9"
+    searchingActiveBorderColor:
+      - "#8BE9FD"
+      - bold
+    optionsTextColor:
+      - "#6272A4"
+    selectedLineBgColor:
+      - "#6272A4"
+    inactiveViewSelectedLineBgColor:
+      - bold
+    cherryPickedCommitFgColor:
+      - "#6272A4"
+    cherryPickedCommitBgColor:
+      - "#8BE9FD"
+    markedBaseCommitFgColor:
+      - "#8BE9FD"
+    markedBaseCommitBgColor:
+      - "#F1FA8C"
+    unstagedChangesColor:
+      - "#FF5555"
+    defaultFgColor:
+      - "#F8F8F2"
+
+# エディットコマンド (e) で、選択中の行にフォーカスした状態でnvimを開く
+os:
+  editCommand: 'nvim' # または 'code'
+  editCommandTemplate: '{{editor}} +{{line}} {{filename}}'

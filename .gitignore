@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Auto-generated
+.config/configstore/
+.config/automatic_backups/
+.config/assets/
+
+
+# Contains tokens/secrets
+.config/raycast/
+.config/wandb/
+.config/raycast/
+.config/htop/
+.config/gh

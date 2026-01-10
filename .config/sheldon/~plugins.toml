@@ -1,0 +1,30 @@
+shell = "zsh"
+
+[plugins]
+
+# Deferred loading - makes shell start faster by loading plugins after prompt
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+# Shows command suggestions as you type (gray text)
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+apply = ["defer"]
+
+# Syntax highlighting (green=valid, red=invalid command)
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+# Additional tab completions for common tools
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["defer"]
+
+[plugins.you-should-use]
+github = "MichaelAquilina/zsh-you-should-use"
+apply = ["defer"]
+
+# Template for deferred loading
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
