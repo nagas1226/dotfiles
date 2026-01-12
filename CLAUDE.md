@@ -10,6 +10,7 @@ Personal dotfiles managed with GNU Stow.
 ├── .config/                # XDG config directory
 │   ├── ghostty/            # Terminal emulator
 │   ├── nvim/               # Neovim editor
+│   ├── wezterm/            # Terminal emulator
 │   ├── lazygit/            # Git terminal UI
 │   ├── sheldon/            # Zsh plugin manager
 │   ├── starship/           # Shell prompt

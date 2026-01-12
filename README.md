@@ -10,6 +10,7 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 ├── .config/
 │   ├── ghostty/            # Terminal emulator
 │   ├── nvim/               # Neovim editor (LazyVim)
+│   ├── wezterm/            # Terminal emulator
 │   ├── lazygit/            # Git terminal UI
 │   ├── sheldon/            # Zsh plugin manager
 │   └── starship/           # Shell prompt
