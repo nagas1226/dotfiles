@@ -17,6 +17,7 @@ alias tree='eza -T'
 alias ai='claude'
 alias vim='nvim'
 alias brewup='brew bundle dump --file=~/.Brewfile --force'
+alias cl='clear'
 
 # change the config path of lazy git  to `~/.config/lazygit/config.yml`
 if command -v lazygit &> /dev/null; then
