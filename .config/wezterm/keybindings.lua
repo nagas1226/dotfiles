@@ -18,6 +18,9 @@ function M.apply(config)
 		-- Close pane
 		{ key = "w", mods = "CMD", action = act.CloseCurrentPane({ confirm = true }) },
 
+		-- Toggle pane zoom
+		{ key = "Enter", mods = "CMD", action = act.TogglePaneZoomState },
+
 		-- Pane resizing
 		{ key = "h", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Left", 3 }) },
 		{ key = "j", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Down", 3 }) },
