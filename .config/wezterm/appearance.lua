@@ -5,7 +5,7 @@ function M.apply(config)
 	config.use_ime = true
 	config.window_decorations = "RESIZE"
 	config.hide_tab_bar_if_only_one_tab = true
-	config.show_tab_index_in_tab_bar = false
+	config.show_tab_index_in_tab_bar = true
 
 	config.color_scheme = "Tokyo Night"
 
