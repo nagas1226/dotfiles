@@ -21,6 +21,20 @@ function M.apply(config)
 		-- Toggle pane zoom
 		{ key = "Enter", mods = "CMD", action = act.TogglePaneZoomState },
 
+		-- Rename tab
+		{
+			key = ",",
+			mods = "CMD",
+			action = act.PromptInputLine({
+				description = "Enter new tab name:",
+				action = wezterm.action_callback(function(window, pane, line)
+					if line then
+						window:active_tab():set_title(line)
+					end
+				end),
+			}),
+		},
+
 		-- Pane resizing
 		{ key = "h", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Left", 3 }) },
 		{ key = "j", mods = "CMD|SHIFT", action = act.AdjustPaneSize({ "Down", 3 }) },
