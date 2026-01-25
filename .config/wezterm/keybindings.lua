@@ -21,6 +21,9 @@ function M.apply(config)
 		-- Toggle pane zoom
 		{ key = "Enter", mods = "CMD", action = act.TogglePaneZoomState },
 
+		-- Enter copy mode (vim-like scrolling with j/k)
+		{ key = "[", mods = "CMD", action = act.ActivateCopyMode },
+
 		-- Rename tab
 		{
 			key = ",",
