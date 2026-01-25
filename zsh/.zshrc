@@ -1,3 +1,13 @@
+# History settings (for fzf Ctrl+R)
+HISTFILE=~/.zsh_history
+HISTSIZE=100000              # Commands in memory
+SAVEHIST=100000              # Commands saved to file
+setopt HIST_IGNORE_ALL_DUPS  # No duplicates
+setopt HIST_SAVE_NO_DUPS     # No duplicates when saving
+setopt HIST_REDUCE_BLANKS    # Remove extra blanks
+setopt SHARE_HISTORY         # Share between sessions
+setopt EXTENDED_HISTORY      # Save timestamp
+
 eval "$(sheldon source)"      # zsh plugins
 eval "$(zoxide init zsh)"     # z command
 eval "$(starship init zsh)"   # terminal prompt settings
