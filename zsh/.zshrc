@@ -1,3 +1,13 @@
+# History settings (for fzf Ctrl+R)
+HISTFILE=~/.zsh_history
+HISTSIZE=100000              # Commands in memory
+SAVEHIST=100000              # Commands saved to file
+setopt HIST_IGNORE_ALL_DUPS  # No duplicates
+setopt HIST_SAVE_NO_DUPS     # No duplicates when saving
+setopt HIST_REDUCE_BLANKS    # Remove extra blanks
+setopt SHARE_HISTORY         # Share between sessions
+setopt EXTENDED_HISTORY      # Save timestamp
+
 eval "$(sheldon source)"      # zsh plugins
 eval "$(zoxide init zsh)"     # z command
 eval "$(starship init zsh)"   # terminal prompt settings
@@ -8,27 +18,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
 
-
-# alias
-alias ls='eza'
-alias ll='eza -lF'
-alias la='eza -lAF'
-alias tree='eza -T'
-alias ai='claude'
-alias vim='nvim'
-alias brewup='brew bundle dump --file=~/.Brewfile --force'
-alias cl='clear'
-
-# change the config path of lazy git  to `~/.config/lazygit/config.yml`
-if command -v lazygit &> /dev/null; then
-  declare -x LG_CONFIG_FILE=~/.config/lazygit/config.yml
-  export LG_CONFIG_FILE
-
-  # lg で lazygit を開く
-  function lg(){
-    lazygit "$@"
-  }
-fi
-
-
-
+# Keep Herdr tab names in sync with the foreground command.
+for _herdr_rename_hook in ${HOME}/.config/herdr/plugins/github/herdr-automatic-rename-*/shell/hook.zsh(N); do
+  source "$_herdr_rename_hook"
+  break
+done
+unset _herdr_rename_hook

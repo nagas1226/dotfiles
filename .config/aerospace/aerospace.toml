@@ -1,0 +1,82 @@
+config-version = 2
+start-at-login = true
+automatically-unhide-macos-hidden-apps = true
+
+persistent-workspaces = [
+    '1', '2', '3', '4', '5', '6', '7', '8', '9',
+    'B', 'W', 'S', 'T', 'O',
+]
+
+on-window-detected = [
+    {
+        if = 'test %{app-bundle-id} = company.thebrowser.Browser',
+        run = 'move-node-to-workspace B',
+    },
+    {
+        if = 'test %{app-bundle-id} = com.mitchellh.ghostty',
+        run = 'move-node-to-workspace W',
+    },
+    {
+        if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap',
+        run = 'move-node-to-workspace S',
+    },
+    {
+        if = 'test %{app-bundle-id} = com.microsoft.teams2',
+        run = 'move-node-to-workspace T',
+    },
+    {
+        if = 'test %{app-bundle-id} = com.microsoft.Outlook',
+        run = 'move-node-to-workspace O',
+    },
+]
+
+[mode.main.binding]
+    alt-h = 'focus left'
+    alt-j = 'focus down'
+    alt-k = 'focus up'
+    alt-l = 'focus right'
+
+    alt-shift-h = 'swap left; focus right'
+    alt-shift-j = 'swap down; focus up'
+    alt-shift-k = 'swap up; focus down'
+    alt-shift-l = 'swap right; focus left'
+
+    alt-ctrl-h = 'move-workspace-to-monitor left'
+    alt-ctrl-j = 'move-workspace-to-monitor down'
+    alt-ctrl-k = 'move-workspace-to-monitor up'
+    alt-ctrl-l = 'move-workspace-to-monitor right'
+
+    alt-minus = 'resize smart -50'
+    alt-equal = 'resize smart +50'
+
+    alt-b = 'exec-and-forget /bin/zsh /Users/shota/dotfiles/scripts/aerospace-focus-app.sh company.thebrowser.Browser'
+    alt-w = 'exec-and-forget /bin/zsh /Users/shota/dotfiles/scripts/aerospace-focus-app.sh com.mitchellh.ghostty'
+    alt-s = 'exec-and-forget /bin/zsh /Users/shota/dotfiles/scripts/aerospace-focus-app.sh com.tinyspeck.slackmacgap'
+    alt-t = 'exec-and-forget /bin/zsh /Users/shota/dotfiles/scripts/aerospace-focus-app.sh com.microsoft.teams2'
+    alt-o = 'exec-and-forget /bin/zsh /Users/shota/dotfiles/scripts/aerospace-focus-app.sh com.microsoft.Outlook'
+
+    alt-shift-b = 'move-node-to-workspace --focus-follows-window B'
+    alt-shift-w = 'move-node-to-workspace --focus-follows-window W'
+    alt-shift-s = 'move-node-to-workspace --focus-follows-window S'
+    alt-shift-t = 'move-node-to-workspace --focus-follows-window T'
+    alt-shift-o = 'move-node-to-workspace --focus-follows-window O'
+
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
+    alt-6 = 'workspace 6'
+    alt-7 = 'workspace 7'
+    alt-8 = 'workspace 8'
+    alt-9 = 'workspace 9'
+
+    alt-shift-1 = 'move-node-to-workspace --focus-follows-window 1'
+    alt-shift-2 = 'move-node-to-workspace --focus-follows-window 2'
+    alt-shift-3 = 'move-node-to-workspace --focus-follows-window 3'
+    alt-shift-4 = 'move-node-to-workspace --focus-follows-window 4'
+    alt-shift-5 = 'move-node-to-workspace --focus-follows-window 5'
+    alt-shift-6 = 'move-node-to-workspace --focus-follows-window 6'
+    alt-shift-7 = 'move-node-to-workspace --focus-follows-window 7'
+    alt-shift-8 = 'move-node-to-workspace --focus-follows-window 8'
+    alt-shift-9 = 'move-node-to-workspace --focus-follows-window 9'

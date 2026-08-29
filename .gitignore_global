@@ -8,6 +8,3 @@ __pycache__/
 
 # dotenv environment variable files
 .env
-
-# claude configs
-.claude/

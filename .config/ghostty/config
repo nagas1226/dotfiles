@@ -1,0 +1,87 @@
+# Translate macOS Command shortcuts into Herdr's Ctrl+j prefix sequences.
+# Ghostty only transports the keys; Herdr owns all pane operations.
+
+# Split panes
+keybind = cmd+d=text:\x0av
+keybind = cmd+shift+d=text:\x0a-
+
+# Focus panes
+keybind = cmd+h=text:\x0ah
+keybind = cmd+j=text:\x0aj
+keybind = cmd+k=text:\x0ak
+keybind = cmd+l=text:\x0al
+
+# Resize panes
+keybind = cmd+shift+h=text:\x0a\x1b[104;3u
+keybind = cmd+shift+j=text:\x0a\x1b[106;3u
+keybind = cmd+shift+k=text:\x0a\x1b[107;3u
+keybind = cmd+shift+l=text:\x0a\x1b[108;3u
+
+# Swap panes using Herdr's prefix+Shift+h/j/k/l bindings
+keybind = cmd+ctrl+h=text:\x0a\x1b[104;2u
+keybind = cmd+ctrl+j=text:\x0a\x1b[106;2u
+keybind = cmd+ctrl+k=text:\x0a\x1b[107;2u
+keybind = cmd+ctrl+l=text:\x0a\x1b[108;2u
+
+# Grow or shrink the focused Herdr pane
+keybind = cmd+==text:\x0a\x1b[43;3u
+keybind = cmd++=text:\x0a\x1b[43;3u
+keybind = cmd+-=text:\x0a\x1b[45;3u
+
+# Create a Herdr tab instead of a Ghostty tab
+keybind = cmd+t=text:\x0ac
+
+# Jump directly to Herdr workspaces 1-9
+keybind = cmd+1=text:\x0a\x1b[49;2u
+keybind = cmd+digit_1=text:\x0a\x1b[49;2u
+keybind = cmd+2=text:\x0a\x1b[50;2u
+keybind = cmd+digit_2=text:\x0a\x1b[50;2u
+keybind = cmd+3=text:\x0a\x1b[51;2u
+keybind = cmd+digit_3=text:\x0a\x1b[51;2u
+keybind = cmd+4=text:\x0a\x1b[52;2u
+keybind = cmd+digit_4=text:\x0a\x1b[52;2u
+keybind = cmd+5=text:\x0a\x1b[53;2u
+keybind = cmd+digit_5=text:\x0a\x1b[53;2u
+keybind = cmd+6=text:\x0a\x1b[54;2u
+keybind = cmd+digit_6=text:\x0a\x1b[54;2u
+keybind = cmd+7=text:\x0a\x1b[55;2u
+keybind = cmd+digit_7=text:\x0a\x1b[55;2u
+keybind = cmd+8=text:\x0a\x1b[56;2u
+keybind = cmd+digit_8=text:\x0a\x1b[56;2u
+keybind = cmd+9=text:\x0a\x1b[57;2u
+keybind = cmd+digit_9=text:\x0a\x1b[57;2u
+
+# Jump directly to Herdr tabs 1-9
+keybind = cmd+shift+digit_1=text:\x0a1
+keybind = cmd+shift+digit_2=text:\x0a2
+keybind = cmd+shift+digit_3=text:\x0a3
+keybind = cmd+shift+digit_4=text:\x0a4
+keybind = cmd+shift+digit_5=text:\x0a5
+keybind = cmd+shift+digit_6=text:\x0a6
+keybind = cmd+shift+digit_7=text:\x0a7
+keybind = cmd+shift+digit_8=text:\x0a8
+keybind = cmd+shift+digit_9=text:\x0a9
+
+# Workspace and session navigation
+keybind = cmd+n=text:\x0a\x1b[110;2u
+keybind = cmd+b=text:\x0ab
+keybind = cmd+shift+w=text:\x0a\x1b[100;2u
+
+# Cycle through Herdr agents in sidebar priority order
+keybind = cmd+o=text:\x0a\x1b[111;3u
+keybind = cmd+shift+o=text:\x0a\x1b[111;4u
+
+# Open the collapsible Herdr workspace/tab/pane picker
+keybind = cmd+p=text:\x0a\x07
+# Karabiner sends F18 after switching macOS to the English input source.
+keybind = f18=text:\x0a\x07
+keybind = cmd+f18=text:\x0a\x07
+keybind = cmd+shift+p=ignore
+
+# Zoom and close panes.
+keybind = cmd+enter=text:\x0az
+keybind = cmd+w=text:\x0ax
+keybind = cmd+alt+w=text:\x0a\x1b[120;2u
+
+# Open the focused Herdr pane's scrollback in $EDITOR
+keybind = cmd+e=text:\x0ae

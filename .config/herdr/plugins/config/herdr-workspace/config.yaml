@@ -1,0 +1,59 @@
+# Copy to the plugin config directory as config.yaml:
+#   herdr plugin config-dir herdr-workspace
+# Missing config.yaml is seeded from this example on first run.
+# How to write profiles: docs/profiles.md
+#
+# Each profile is a card in the popup. Tabs are created in order.
+# The first pane of a tab is the tab's root (no split_from).
+# Later panes split from an earlier pane id in the same tab.
+# direction: right | down. ratio is the new pane's share of the split (0–1).
+# command is sent with Enter after the layout is built; omit to leave a shell.
+# Use YAML `|` for a multiline command.
+# To start a named Herdr agent (so `herdr agent prompt <name>` works), set
+# agent + kind instead of command. Extra flags go in args and are passed after `--`.
+
+profiles:
+  - id: solo
+    name: Solo
+    description: |
+      One tab, one shell in the project directory.
+    tabs:
+      - name: main
+        panes:
+          - id: shell
+            name: shell
+
+  - id: pair
+    name: Pair
+    description: |
+      Shell on the left, coding agent on the right.
+    tabs:
+      - name: main
+        panes:
+          - id: shell
+            name: shell
+          - id: agent
+            name: agent
+            split_from: shell
+            direction: right
+            ratio: 0.5
+            agent: pair
+            kind: codex
+
+  - id: full
+    name: Full
+    description: |
+      Codex with a compact shell below. File Annotator opens to the right
+      during a live review, matching the default working layout.
+    tabs:
+      - name: main
+        panes:
+          - id: agent
+            name: agent
+            agent: coder
+            kind: codex
+          - id: shell
+            name: shell
+            split_from: agent
+            direction: down
+            ratio: 0.85

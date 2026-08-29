@@ -1,0 +1,42 @@
+{
+  "respectGitignore": false,
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[[ $CLAUDE_FILE_PATH == *.py ]] && ruff format $CLAUDE_FILE_PATH && ruff check --fix $CLAUDE_FILE_PATH || true"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/Users/shota/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "mgrep@Mixedbread-Grep": true,
+    "pyright-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "astral-sh": {
+      "source": {
+        "source": "github",
+        "repo": "astral-sh/claude-code-plugins"
+      }
+    }
+  },
+  "alwaysThinkingEnabled": false,
+  "skipDangerousModePermissionPrompt": true
+}

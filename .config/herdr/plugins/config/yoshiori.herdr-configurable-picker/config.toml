@@ -1,0 +1,12 @@
+[keys]
+# Navigation that passes through the Japanese IME.
+down = ["down", "ctrl+n", "j"]
+up = ["up", "ctrl+p", "k"]
+page_down = ["pagedown", "ctrl+v"]
+page_up = ["pageup", "ctrl+u"]
+top = ["home"]
+bottom = ["end"]
+
+[behavior]
+# Start with a compact workspace-only list; expand a workspace on demand.
+initial_expansion = "none"
