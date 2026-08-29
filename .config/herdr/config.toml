@@ -72,7 +72,8 @@ description = "new workspace from layout profile"
 delivery = "herdr"
 
 [ui]
-agent_panel_sort = "priority"
+# Keep agents grouped by workspace so Cmd+O follows a predictable project order.
+agent_panel_sort = "spaces"
 prompt_new_tab_name = false
 
 [theme]

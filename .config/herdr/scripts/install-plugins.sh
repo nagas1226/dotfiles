@@ -13,8 +13,8 @@ herdr_bin=${HERDR_BIN_PATH:-herdr}
   --ref 11cbee3aa54ea3a507550e4f58a2727de2b119eb \
   --yes
 
-"$herdr_bin" plugin install zackshen/herdr-workspace \
-  --ref b5f38d0e295168fcd87284b710049a183140f010 \
+"$herdr_bin" plugin install nagas1226/herdr-workspace \
+  --ref 64b76cfc1853bca39498d8bbb45e969e209d4489 \
   --yes
 
 "$herdr_bin" plugin install yoshiori/herdr-configurable-picker \
