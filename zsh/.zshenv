@@ -1,4 +1,3 @@
-export PATH="/Users/shota/.local/bin:/Library/TeX/texbin:$PATH"
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 
 # default terminal
