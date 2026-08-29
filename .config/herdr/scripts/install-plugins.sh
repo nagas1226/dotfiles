@@ -21,6 +21,6 @@ herdr_bin=${HERDR_BIN_PATH:-herdr}
   --ref 9b53d836f226d51efc81a70185db08028bd574c1 \
   --yes
 
-"$herdr_bin" plugin install JonasBaeumer/herdr-file-annotator \
-  --ref ac9b5efc6e62b276ee351c5dbd6536e6d90df152 \
+"$herdr_bin" plugin install persiyanov/herdr-reviewr \
+  --ref 4fc80835699e293f0608c243028f8513557d7c77 \
   --yes
