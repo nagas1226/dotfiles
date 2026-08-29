@@ -1,4 +1,0 @@
-# Keep the live diff visible beside Codex while work continues.
-placement = "split"
-direction = "right"
-focus = false
