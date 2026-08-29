@@ -1,7 +1,7 @@
 # The Full workspace layout starts Reviewr explicitly.
 theme = "tokyo-night"
 default_scope = "uncommitted"
-navigator_position = "right"
+navigator_position = "left"
 toggle_placement = "split"
 toggle_direction = "right"
 auto_open = false
