@@ -9,7 +9,7 @@
 [commit]
 	template = ~/.stCommitMsg
 [core]
-	editor = code --wait
+	editor = nvim
 	autocrlf = false
 	ignorecase = false
 	quotepath = false
