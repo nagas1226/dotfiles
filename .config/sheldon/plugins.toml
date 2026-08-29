@@ -25,6 +25,9 @@ apply = ["defer"]
 github = "MichaelAquilina/zsh-you-should-use"
 apply = ["defer"]
 
+[plugins.zsh-abbr]
+github = "olets/zsh-abbr"
+
 # Template for deferred loading
 [templates]
 defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
