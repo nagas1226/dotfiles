@@ -1,0 +1,7 @@
+# Herdr runtime state and downloaded plugin worktrees.
+*.log
+.plugins.lock
+plugins.json
+release-notes.json
+session.json
+plugins/github/

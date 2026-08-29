@@ -1,0 +1,83 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+j"
+open_worktree = "prefix+shift+o"
+goto = "prefix+alt+g"
+new_workspace = ""
+next_agent = "prefix+alt+o"
+previous_agent = "prefix+alt+shift+o"
+switch_workspace = "prefix+shift+1..9"
+
+[[keys.command]]
+key = "prefix+alt+plus"
+type = "shell"
+command = "$HOME/dotfiles/.config/herdr/scripts/resize-pane.sh grow"
+description = "grow focused pane"
+
+[[keys.command]]
+key = "prefix+alt+minus"
+type = "shell"
+command = "$HOME/dotfiles/.config/herdr/scripts/resize-pane.sh shrink"
+description = "shrink focused pane"
+
+[[keys.command]]
+key = "prefix+alt+h"
+type = "shell"
+command = "herdr pane resize --direction left --amount 0.05 --current"
+description = "resize pane left"
+
+[[keys.command]]
+key = "prefix+alt+j"
+type = "shell"
+command = "herdr pane resize --direction down --amount 0.05 --current"
+description = "resize pane down"
+
+[[keys.command]]
+key = "prefix+alt+k"
+type = "shell"
+command = "herdr pane resize --direction up --amount 0.05 --current"
+description = "resize pane up"
+
+[[keys.command]]
+key = "prefix+alt+l"
+type = "shell"
+command = "herdr pane resize --direction right --amount 0.05 --current"
+description = "resize pane right"
+
+
+[[keys.command]]
+key = "prefix+f"
+type = "shell"
+command = "herdr plugin action invoke open file viewer --plugin herdr-file-viewr"
+
+[[keys.command]]
+key = "prefix+g"
+type = "pane"
+command = "lazygit"
+
+[[keys.command]]
+key = "prefix+ctrl+g"
+type = "plugin_action"
+command = "yoshiori.herdr-configurable-picker.open"
+description = "configurable goto picker"
+
+[[keys.command]]
+key = "prefix+shift+n"
+type = "plugin_action"
+command = "herdr-workspace.open"
+description = "new workspace from layout profile"
+
+[ui.toast]
+delivery = "herdr"
+
+[ui]
+agent_panel_sort = "priority"
+prompt_new_tab_name = false
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[experimental]
+switch_ascii_input_source_in_prefix = true

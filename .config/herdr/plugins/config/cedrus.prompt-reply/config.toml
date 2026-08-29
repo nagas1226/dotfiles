@@ -1,0 +1,3 @@
+# Let Prompt Reply own macOS notifications while Herdr keeps in-app toasts.
+notify_done = true
+sound = "Ping"
