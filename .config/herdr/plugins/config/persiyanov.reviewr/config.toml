@@ -1,4 +1,4 @@
-# Open Reviewr only when requested; keep it beside the active agent.
+# The Full workspace layout starts Reviewr explicitly.
 theme = "tokyo-night"
 default_scope = "uncommitted"
 navigator_position = "right"
